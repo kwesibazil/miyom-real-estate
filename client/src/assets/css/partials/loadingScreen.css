@@ -1,0 +1,92 @@
+
+
+.loading{
+  height: 100vh;
+  color:  var(--text);
+  max-width: 900px;
+  margin: 1rem auto;
+  
+  
+  .loading-content{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+    progress { 
+      width: 70%; 
+      height: .7rem;
+      overflow: hidden; 
+      border-radius: 5px; 
+      border: 1px solid var(--primary);
+    }
+    
+    progress::-webkit-progress-bar {
+      opacity: .7;
+      border-radius: 5px; 
+      background-color: var(--secondary); 
+    }
+
+    progress::-webkit-progress-value {
+      opacity: 1;
+      border-radius: 0 5px 5px 0; 
+      background: var(--primary);
+    }
+  }
+
+
+  .company-brand {
+    display: flex;
+    margin: 3rem 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+
+    .company-name {
+      font-size: 44px;
+      font-weight: 700;
+      margin-bottom: -.5rem;
+      letter-spacing: .5rem ;
+      text-transform: uppercase;
+    }
+
+    .company-motto {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      letter-spacing: 2px ;
+      text-transform: capitalize;
+    }
+
+  }
+
+  .loading-feedback {
+    width: 50%;
+    margin: 5rem auto;
+    text-align: center;
+    perspective: 500px;
+    color: var(--text);
+
+    p{
+      margin: 0;
+      opacity: .3;
+      transition: all .6s;
+      font-size: var(--fs-9);
+      transform: translateZ(5px); 
+    }
+  
+    .current{
+      margin: 0;
+      opacity: .7;
+      transition: all .6s;
+      letter-spacing: 2px;
+      font-size: var(--fs-8); 
+      transform: translateZ(20px); 
+      
+    }
+  }
+}
+
+

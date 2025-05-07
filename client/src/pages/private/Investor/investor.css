@@ -1,0 +1,89 @@
+
+
+.investor{
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+
+  .investor-section-container{
+    .investor-section-heading-container{
+      display: flex;
+      align-items: center;
+      padding: var(--size-8) 0;
+      justify-content: space-between;
+    }
+  }
+
+  .investor-card-container{
+    height: auto;
+    overflow: auto;
+    overflow-y: auto;
+  }
+
+  .investor-card{
+    display: flex;
+    color: var(--text);
+    flex-direction: column;
+    padding: var(--size-16);
+    margin: var(--size-14) 0;
+    background-color: var(--surface);
+  
+  
+    .investor-profile-container{
+      height: 35px;
+      overflow: hidden;
+    
+      img{
+        height: 100%;
+        width: 100%;
+        display: block;
+      }
+    }
+  
+  
+    .editable-row-container{
+      .editable-row{
+        display: flex;
+        padding: 1rem;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: var(--border-radius-md);
+    
+        .detail-title{
+          margin: 0;
+          font-weight: 600;
+          font-size: var(--size-16);
+        }
+    
+        .detail-value{
+          margin: 0;
+          font-weight: 500;
+          font-size: var(--size-16);
+        }
+      }
+    }
+    
+    .editable-row:nth-child(odd){
+      background-color:var(--secondary);
+    }
+  }
+}
+
+
+.investor::-webkit-scrollbar, 
+.investor-single::-webkit-scrollbar,
+.investor-card-container::-webkit-scrollbar{
+  display: none;
+}
+
+
+
+
+
+.investor-amount{
+  color: var(--text);
+}
+
+
+

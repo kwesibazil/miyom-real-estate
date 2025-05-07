@@ -1,0 +1,228 @@
+
+
+.new-password-form{
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  color: var(--text);
+  position: absolute;
+  width: clamp(450px, 63%, 500px);
+  transform: translate(-50%, -50%);
+  border-radius: var(--border-radius-lg);
+  transition: color 0.5s, background-color 0.5s;
+
+  .tag-message{
+    text-align: start;
+    font-size: var(--fs-7);
+  }
+}
+
+
+.modal-form-container {
+  color: var(--text);
+  max-width: 650px;
+  position: relative;
+  background-color: var(--surface);
+  transition: color 0.5s, background-color 0.5s;
+
+
+  /* kwesi */
+  .form-input-container   input:focus-visible {
+    outline: none !important;
+  }
+
+  .form-input-container input:focus{
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    border-radius: var(--border-radius-md);
+  }
+}
+
+.success-feedback-container{
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .success-icon{
+    font-size: 4rem;
+  }
+}
+
+.password-hint{
+  margin: 0;
+  text-align: start;
+  line-height: 1.1;
+  font-size: .68rem;
+  margin-top: var(--size-12);
+  margin-bottom: var(--size-30);
+}
+
+
+
+.password-error-feedback{
+  .password-strength{
+    display: flex;
+    align-self: center;
+    margin-bottom: -3px;
+    justify-content: space-between;
+  }
+
+  .likert-scale{
+    width: 5%;
+    height: 7px;
+    margin: 0 .2rem;
+    display: inline-block;
+    background-color: #f5f5f5db;
+  }
+
+  .password-criteria p{
+    display: flex;
+    margin-bottom: -9px;
+    align-items: center;
+    font-size: var(--fs-8);
+  }
+}
+
+.investor-info{
+  color: var(--text);
+  background-color: var(--surface);
+}
+
+
+
+.feedback-popup{
+  top: 0;
+  left: 0;
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+
+  .feedback-overlay{
+    top: 0;
+    left: 0;
+    z-index: 16;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    position: absolute;
+    background-color: var(--surface);
+  }
+
+
+  .loader-container{
+    top: 40%;
+    left: 50%;
+    z-index: 26;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+
+  .feedback-container{
+    top: 50%;
+    left: 50%;
+    z-index: 26;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    .feedback-icon{
+      height: 50%;
+      width: 50%;
+    }
+  }
+}
+
+
+.set-password-feedback{
+  background-color: var(--surface);
+  padding: 0 1rem;
+  overflow: hidden;
+  position: absolute;
+  z-index: 60;
+  top: 123px;
+  left: 50px;
+  right: 50;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+
+  span{
+    max-width: 70%;
+    text-align: start;
+    font-size: var(--fs-7);
+  }
+}
+
+
+.form-error-pop{
+  top: 38px;                  
+  position: absolute;
+  color: var(--bs-red);
+  font-size: var(--fs-7);
+  text-transform: lowercase;
+}
+
+.form-error-pop.update{
+  top: 45px !important; 
+}
+
+
+
+
+.loader {
+  width: 8px;
+  height: 40px;
+  border-radius: 4px;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  background: currentColor;
+  color: var(--primary);
+  box-sizing: border-box;
+  animation: animloader 0.3s 0.3s linear infinite alternate;
+}
+
+.loader::after, .loader::before {
+  content: '';
+  width: 8px;
+  opacity: 1;
+  height: 40px;
+  border-radius: 4px;
+  background: currentColor;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  box-sizing: border-box;
+  animation: animloader 0.3s  0.45s  linear infinite alternate;
+}
+.loader::before {
+  left: -20px;
+  animation-delay: 0s;
+}
+
+@keyframes animloader {
+  0%   { height: 48px} 
+  100% { height: 4px}
+}
+
+
+/* Styles for  laptop  and smaller screens  */
+@media (min-width: 567px) {
+  .modal-form-container {
+    padding: 0 var(--size-16) ;
+  }
+}
+
+@media (min-width: 768px){
+  .modal-form-container {
+    padding: 0 var(--size-28) ;
+  }
+}
+

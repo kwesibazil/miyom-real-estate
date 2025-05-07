@@ -1,0 +1,248 @@
+
+/* custom/user created css files */
+@import './partials/bootstrap.custom.css';      /* overridden bootstrap css styles */
+@import './partials/theme.custom.css';          /* light & dark mode css styles */
+
+
+
+
+:root {
+  --font-size-base: 1rem;
+  --line-height-body: 1.6;
+  --line-height-heading: 1.2; 
+  --font-family: 'Poppins', sans-serif;
+
+  --border-radius-xs: var(--size-6);
+  --border-radius-sm: var(--size-12);
+
+  --border-radius-md: var(--size-8);
+  --border-radius-lg: var(--size-16);
+  --border-radius-circle: var(--size-30);
+
+  --swiper-pagination-color: var(--surface);
+  --swiper-pagination-bullet-inactive-color: var(--background);
+}
+
+
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  box-sizing: border-box;
+  transition: color 0.5s, background-color 0.5s;
+}
+
+
+
+
+
+
+html,body{
+  color: var(--text);
+  min-width: 340px;
+  min-height: 100vh;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  background-color: var(--background);
+
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-family:  Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: color 0.5s, background-color 0.5s;
+}
+
+
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* 
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: fade 0.5s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+} */
+
+
+
+.surface-container{
+  display: flex;
+  color: var(--text);
+  flex-direction: column;
+  padding: var(--size-24);
+  margin: var(--size-16) 0;
+  background-color: var(--surface);
+}
+
+
+.empty-container{
+  height: 100%;
+  display: flex;
+  align-items: start;
+  color: var(--text);
+  padding: 0 var(--size-30);
+  justify-content: center;
+  
+  .empty-body{
+    height: 95%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    margin-top: 2rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--surface); 
+  
+    
+    
+    .empty-image-container{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      height: 150px;
+
+      svg{
+        width: 100%;
+        height: 100%;
+        display: block;
+        padding: 0;
+        border-radius: var(--size-8);
+      }
+    }
+  }
+}
+
+
+[data-theme="light"] {
+  .empty-container {
+    .empty-body {
+      border: dashed .5px var(--text);
+    }
+  }
+}
+[data-theme="dark"] {
+  .empty-container {
+    .empty-body {
+      border: dashed .5px var(--border);
+    }
+  }
+}
+
+
+img{
+  display: block;
+}
+
+.header-brand{
+  color: var(--text) !important;
+}
+
+.surface-container{
+  background-color: var(--surface);
+}
+
+.background-container{
+  background-color: var(--background);
+}
+
+a{
+  text-decoration: none !important ;
+}
+
+
+
+
+.form-link{
+  font-size: var(--fs-7);
+  display: inline-block;
+  text-decoration: none;
+  color:  var(--text-accent);
+}.form-link:hover{
+  text-decoration: underline;
+}  
+
+
+
+.theme-transition {
+  transition: color 0.5s, background-color 0.5s;
+}
+
+
+
+.primary-heading{
+  margin: 0;
+  font-weight: 600;
+  color: var(--text);
+  font-size: var(--size-30);
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.secondary-heading{
+  font-weight: 400;
+  font-size: var(--size-14);
+
+  font-family: 'Poppins', sans-serif;
+}.secondary-heading:hover{
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+/* --MEDIA QUERIES STYLES-- */
+
+/* LESS THAN 576  { XS } */
+@media (max-width: 576px){
+  .primary-heading{
+    font-size: var(--size-18);
+  }
+
+  .secondary-heading{
+    font-size: var(--size-12);
+  }
+}
+
+
+
+
+/* GREATER THAN 576 { SM } */
+@media(min-width: 576px){
+  .primary-heading{
+    font-size: var(--size-20);
+  }
+}
+
+
+/* GREATER THAN 768 { MD }*/
+@media(min-width: 768px){}
+
+
+/* GREATER THAN 992 { LG } */
+@media(min-width: 992px){}
+
+
+/* GREATER THAN 1200 { XL } */
+@media(min-width: 1200px){}
+

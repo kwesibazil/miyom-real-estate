@@ -1,0 +1,132 @@
+
+
+.dashboard{
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+
+  .dashboard-section-container{
+    .dashboard-section-heading-container{
+      display: flex;
+      align-items: center;
+      padding: var(--size-8) 0;
+      justify-content: space-between;
+    }
+  }
+}
+
+
+.dashboard::-webkit-scrollbar{
+  display: none;
+}
+
+
+.dashboard-section-container.flex-grow-1 {
+  flex-grow: 1;
+  min-height: 0; /* ⚠️ Critical to allow scrollable children */
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+.investor-amount{
+  color: var(--text);
+}
+
+
+.overview-grid{
+  overflow: hidden;
+
+  .overview-tabs-container{
+    gap: 10px;
+    display: flex;
+
+    .tabs-btn{
+      margin-bottom: .6rem;
+      color: var(--text-muted);
+      padding: var(--size-10) var(--size-24);
+      border: 1px dashed var(--text-muted)
+    }
+
+    .tabs-btn.active{
+      border: none;
+      margin-bottom: 0;
+      color: var(--text);
+      border-bottom: none;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      background-color: var(--surface);
+    }
+  }
+
+
+  .overview-cards-container{
+    gap: 10px;
+    height: 170px;
+    overflow: hidden;
+    display: flex;
+    color: var(--text);
+    padding: var(--size-14);
+    background-color: var(--surface);
+
+    .overview-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--size-8);
+      background-color: var(--secondary);
+    }
+  }
+
+}
+
+
+
+
+
+
+
+/* LESS THAN 576  { XS } */
+@media (max-width: 992px){
+  .overview-grid{
+    .overview-cards-container{
+      overflow: auto;
+      padding-bottom: var(--size-24);
+    }
+
+    .overview-cards-container::-webkit-scrollbar {
+      width: 10px; /* Width of the vertical scrollbar */
+      height: 10px; /* Height of the horizontal scrollbar */
+    }
+
+    .overview-cards-container::-webkit-scrollbar-thumb {
+      background-color: var(--primary); /* Color of the thumb */
+      border-radius: 5px; /* Roundness of the thumb */
+      border: 2px solid transparent; /* Optional: Add a border */
+      background-clip: padding-box; /* Make the border visible */
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+@media(min-width: 992px){
+
+  /* Table id and Rate Column */
+.property-id{
+  max-width: 90px;
+}
+
+}

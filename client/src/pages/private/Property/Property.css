@@ -1,0 +1,57 @@
+
+
+.property-image-card-container{
+    height: 150px;
+    display: flex;
+    max-height: 70%;
+    align-items: center;
+    justify-content: center;
+    border-radius: none !important;
+
+  
+
+
+    img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: none !important;
+    }
+  }
+
+
+  .property-street{
+    max-width: 95%;
+    white-space: nowrap;        /* Prevents text from wrapping */
+    overflow: hidden;           /* Hides the overflowing text */
+    text-overflow: ellipsis;
+  }
+
+
+@media (max-width: 992px){
+  .property-card{
+    .property-card-description-container{
+      .property-card-description-body-text{
+        font-size: var( --size-16);
+      }
+  
+      .property-description {
+        color: var(--text);
+        font-size: var(--size-14);
+      }
+    }
+  }
+  
+}
+
+
+@media (min-width: 992px){
+  .property-card{
+    .property-card-image-grid-container{
+      .secondary-sub-grid{
+        display: flex;
+      }
+    }
+  }
+}
+

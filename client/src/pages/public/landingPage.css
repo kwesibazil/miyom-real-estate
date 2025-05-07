@@ -1,0 +1,92 @@
+
+.login-form{
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  color: var(--text);
+  position: absolute;
+  width: clamp(450px, 63%, 500px);
+  transform: translate(-50%, -50%);
+  border-radius: var(--border-radius-lg);
+  transition: color 0.5s, background-color 0.5s;
+}
+
+
+
+.form-container{
+  padding: 3.5rem 4rem;
+  position: relative;
+  background-color: var(--surface);
+  transition: color 0.5s, background-color 0.5s;
+
+  .feedback-container{
+    height: 40px;
+    display: flex;
+    overflow: hidden;
+    margin: var(--size-5) 0;
+    align-items: center;
+
+    p{
+      font-size: var(--size-14);
+      line-height: 1.1;
+    }
+  }
+
+  .form-terms{
+    left: 0;
+    width: 100%;
+    position: absolute;
+    font-size: var(--fs-8);
+  }
+}
+
+
+.info-container{
+  color: white;
+  overflow: hidden;
+  padding: 4.5rem 4rem;
+  max-height:  600px;
+  background-color: var(--primary);
+
+  .info-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 70%;
+
+    img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      padding: 0;
+      border-radius: var(--size-8);
+    }
+  }
+}
+
+
+.forgot-password-btn{
+  top: 35%;
+  right: 0;
+  display: none;
+  position: absolute;
+}
+
+
+.reset-password-form{
+  max-width: 500px;
+
+  .feedback-container{
+    height: 50px;
+    margin: 0;
+  }
+}
+
+
+
+/* GREATER THAN 1200 { XL } */
+@media(min-width: 1200px){
+  .login-form{
+    width: clamp(500px, 75%, 930px);
+  }
+}
